@@ -16,6 +16,6 @@ RUN sed -i -f httpdconf.sed /etc/httpd/conf/httpd.conf && \
 RUN curl -LO https://kanboard.net/kanboard-1.0.33.zip && \
     unzip kanboard-1.0.33.zip && \
     mv kanboard /var/www/html && \
-    chmod -R a+rwx /var/www/html/data
+    chmod -R a+rwx /var/www/html/kanboard/data
 
 CMD ["/run-httpd.sh"]
