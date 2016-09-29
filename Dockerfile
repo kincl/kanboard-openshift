@@ -11,7 +11,7 @@ RUN chmod a+x /run-httpd.sh
 
 ADD httpdconf.sed /httpdconf.sed
 RUN sed -i -f httpdconf.sed /etc/httpd/conf/httpd.conf && \
-    chmod -R a+rwx /run/httpd
+    chmod -R a+rwx /run/httpd && \
     chmod -R a+rwx /var/lib/php/session
 
 RUN curl -LO https://kanboard.net/kanboard-1.0.33.zip && \
