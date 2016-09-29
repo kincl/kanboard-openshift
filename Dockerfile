@@ -3,7 +3,7 @@ FROM centos:latest
 EXPOSE 8080
 
 RUN yum -y update && \ 
-    yum -y install httpd php php-gd php-mbstring sqlite && \
+    yum -y install httpd php php-gd php-mbstring sqlite unzip && \
     yum clean all
 
 ADD run-httpd.sh /run-httpd.sh
